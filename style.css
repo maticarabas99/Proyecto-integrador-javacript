@@ -1,0 +1,392 @@
+:root{
+    --amarillo: #FEE600;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-list{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    list-style-type: none;
+    font-family: 'REM', sans-serif;
+    margin: 10px; 
+}
+.navbar-link{
+    text-decoration: none;
+    color: white;
+}
+.navbar-logo{
+    height: 50px;
+    width: 50px;
+}
+.btn-cart img{
+    height: 30px;
+    width: 30px;
+    margin-right: 50px;
+}
+.btn-user{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    height: 35px;
+    width: 160px;
+    background-color: var(--amarillo);
+    color: black;
+    border-radius: 25px;
+    padding: 6px;
+    font-size: 18px;
+}
+.btn-user img{
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/4429141/pexels-photo-4429141.jpeg?cs=srgb&dl=pexels-ketut-subiyanto-4429141.jpg&fm=jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.info-pag{
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    padding: 30px;
+    font-family: 'REM', sans-serif; 
+}
+.info-pag h1{
+    font-size: 160px;
+    color: var(--amarillo);
+    font-family: 'Cabin', sans-serif;
+}
+.info-pag p{
+    font-size: 25px;
+    padding: 20px 550px 0 0 ;
+    color: white;
+    line-height: 35px;
+}
+.info-pag button{
+    background-color: black;
+    color: white;
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    font-family: 'REM', sans-serif; 
+}
+.sobre-nosotros{
+    display: flex;
+    margin-top: 217px;
+    background-color: var(--amarillo);
+}
+.sobre-nosotros-info{
+    display: flex;
+    flex-direction: column;
+    margin: 120px 60px;
+    
+}
+.sobre-nosotros-info h2{
+    font-family: 'Cabin', sans-serif;
+    font-size: 80px;
+}
+.sobre-nosotros-info p{
+    font-size: 20px;
+    font-family: 'REM', sans-serif; 
+    margin: 20px 0;
+    line-height: 35px;
+}
+.sn-img img{
+    height: 300px;
+    width: 500px;
+    margin: 30px;
+}
+.tienda{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px 0;
+    text-decoration: none;
+}
+.tienda h3{
+font-size: 50px;
+font-family: 'Cabin', sans-serif;
+margin: 20px;
+}
+.categorias{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'REM', sans-serif;
+    list-style-type: none;
+    color: black;
+}
+.categorias a{
+    text-decoration: none;
+    color: black;
+}
+.card-productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    margin: 40px;
+}
+.card:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;}
+.card-productos img{
+    height: 200px;
+    width: 200px;
+    border-radius: 0 30px 0 30px;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    width: 250px;
+    background-color: var(--amarillo);
+    border-radius: 0 30px 0 30px;
+    
+}
+.info-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.info-card h3{
+    font-size: 20px;
+}
+.info-card p{
+    margin: 10px;
+    font-family: 'Cabin', sans-serif;
+}
+.info-card button{
+    padding: 10px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+article button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+.contacto{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: var(--amarillo);
+}
+.contacto-img{
+    height: 600px;
+    width: 450px;
+}
+.contacto-info{
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contacto-info h3{
+    font-size: 40px;
+    margin:  40px;
+    font-family: 'Cabin', sans-serif;
+}
+.contacto-info ul{
+    list-style-type: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 20px;
+    font-family: 'Cabin', sans-serif;
+}
+.contacto-info li img{
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+.contacto-info li{
+    display: flex;
+    align-items: center;
+}
+.redes li{
+    padding: 10px;
+    list-style-type: none;
+}
+footer{
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 200px;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 20px;
+}
+.abrir-menu,
+.cerrar-menu{
+    display: none;
+}
+@media screen and (max-width: 992px) {
+    .abrir-menu{
+        margin-right: 20px;
+        display: block;
+        border: none;
+        background-color: black;
+    }
+    .abrir-menu img{
+        width: 50px;
+        height: 50px;
+    }
+    .cerrar-menu{
+        display: block;
+        border: none;
+        background-color: black;
+    }
+    .cerrar-menu img{
+        width: 50px;
+        height: 50px;
+    }
+     
+    .nav{
+        display: none;
+    }
+    .nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: black;
+        padding: 40px;
+        border-radius: 0 0 0 50px;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+        
+    }
+    .info-pag{
+        padding: 60px;
+    }
+    .info-pag h1{
+        font-size: 100px;
+        margin-top: 30px;
+    }
+    .info-pag p{
+        padding: 20px 250px 0 0;
+        font-size: 15px;
+        line-height: 30px;
+    }
+    .info-pag button{
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .contacto-info{
+        margin-left: 0;
+    }
+    .contacto-img{
+        height: 500px;
+        width: 360px;
+    }
+    .sobre-nosotros{
+        margin: 0;
+    }
+    .sn-img img{
+        height: 250px;
+        width: 400px;
+    }
+    .sobre-nosotros-info{
+        margin: 40px 0 0 20px;
+    }
+    .sobre-nosotros-info h2{
+        font-size: 40px;
+    }
+    .tienda h3{
+        font-size: 30px;
+    }  
+    .card{
+        height: 300px;
+        width: 180px;
+    }
+    .card:hover{
+        box-shadow: none;
+    }
+    .card-productos img{
+        height: 100px;
+        width: 100px;
+    }  
+    .info-card h3{
+        font-size: 14px;
+    }
+    .info-card p{
+        margin: 5px;
+    }
+    .info-card button{
+        padding: 10px;
+        font-size: 10px;
+    }
+    article button{
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .contacto-info h3{
+        font-size: 40px;
+        margin: 20px;
+    }
+    .contacto-info ul{
+        gap: 20px;
+        font-size: 20px;
+    }
+    .redes li img{
+        height: 50px;
+        width: 50px;
+    }
+    footer{
+        font-size: 10px;
+        padding: 10px 20px;
+        line-height: 10px;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+
+}
