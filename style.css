@@ -59,15 +59,17 @@
 body{
     width: 100%;
     height: 100vh;
-    background-image: url(https://images.pexels.com/photos/4429141/pexels-photo-4429141.jpeg?cs=srgb&dl=pexels-ketut-subiyanto-4429141.jpg&fm=jpg);
+    background-image: url(imagenes\ javascript/nuevo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .info-pag{
+    height: 100vh;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     flex-direction: column;
+    align-items: center;
     padding: 30px;
     font-family: 'REM', sans-serif; 
 }
@@ -78,7 +80,7 @@ body{
 }
 .info-pag p{
     font-size: 25px;
-    padding: 20px 550px 0 0 ;
+    padding: 20px 200px;
     color: white;
     line-height: 35px;
 }
@@ -94,7 +96,7 @@ body{
 }
 .sobre-nosotros{
     display: flex;
-    margin-top: 217px;
+   
     background-color: var(--amarillo);
 }
 .sobre-nosotros-info{
@@ -311,7 +313,7 @@ footer{
         margin-top: 30px;
     }
     .info-pag p{
-        padding: 20px 250px 0 0;
+        padding: 20px 50px;
         font-size: 15px;
         line-height: 30px;
     }
