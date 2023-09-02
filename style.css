@@ -390,5 +390,37 @@ footer{
     
 }
 @media screen and (max-width: 768px) {
-
+.card-productos{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px
+}
+.card{
+    height: 200px;
+    width: 160px;
+}
+.info-card h3{
+    font-size: 10px;
+    margin: 10px;
+}
+.info-card p{
+    margin: 3px;
+}
+.info-card button{
+    padding: 5px;
+    font-size: 7px;
+    margin-top: 0;
+}
+.card-productos img{
+    padding: 5px;
+}
+.sn-img img{
+    height: 125px;
+    width: 200px;
+}
+.tienda-h3{
+    font-size: 25px;
+} 
+.cat-list{
+    font-size: 12px;
+}
 }
