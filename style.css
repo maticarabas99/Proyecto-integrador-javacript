@@ -307,6 +307,7 @@ footer{
     }
     .info-pag{
         padding: 60px;
+        height: 800px;
     }
     .info-pag h1{
         font-size: 100px;
@@ -378,6 +379,9 @@ footer{
         gap: 20px;
         font-size: 20px;
     }
+    .contacto{
+        justify-content: space-evenly;
+    }
     .redes li img{
         height: 50px;
         width: 50px;
@@ -389,7 +393,7 @@ footer{
     }
     
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
 .card-productos{
     grid-template-columns: repeat(2, 1fr);
     gap: 10px
@@ -416,11 +420,55 @@ footer{
 .sn-img img{
     height: 125px;
     width: 200px;
+    margin: 20px 0;
+}
+.sn-img{
+    margin: 70px 10px;
+}
+.sobre-nosotros-info{
+    margin: 20px 0 0 10px;
+}
+.sobre-nosotros-info h2{
+    font-size: 24px;
+}
+.sobre-nosotros-info p{
+    font-size: 12px;
+    line-height: 17px;
+    margin: 0;
 }
 .tienda-h3{
     font-size: 25px;
 } 
 .cat-list{
-    font-size: 12px;
+    font-size: 11px;
+}
+.categorias{
+    gap: 10px;
+}
+.info-pag{
+    padding: 60px 0 0 0;
+    height: 700px;
+}
+.info-pag h1{
+    font-size: 60px;
+}
+.info-pag p{
+    padding: 20px 30px;
+    font-size: 15px;
+    line-height: 25px;
+}
+.redes li{
+    padding: 20px 0;
+}
+.contacto{
+    padding: 30px;
+}
+.contacto-info ul {
+    gap: 5px;
+    font-size: 15px;
+}
+.contacto-info h3{
+    font-size: 30px;
+    margin: 10px;
 }
 }
