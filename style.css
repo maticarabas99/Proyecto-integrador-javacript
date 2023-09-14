@@ -33,10 +33,16 @@
     height: 50px;
     width: 50px;
 }
+.btn-cart{
+    border: none;
+    background-color: black;
+}
 .btn-cart img{
     height: 30px;
     width: 30px;
-    margin-right: 50px;
+}
+.cart{
+    display: none;
 }
 .btn-user{
     display: flex;
@@ -141,9 +147,9 @@ margin: 20px;
     list-style-type: none;
     color: black;
 }
-.categorias a{
-    text-decoration: none;
-    color: black;
+.cat-list{
+    border: none;
+    background-color: white;
 }
 .card-productos{
     display: grid;
@@ -190,10 +196,19 @@ margin: 20px;
     color: white;
     background-color: black;
 }
-article button{
+.productos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn-vm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 20px;
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius:10px;
+    margin: 20px;
     border: none;
     color: white;
     background-color: black;
@@ -201,7 +216,7 @@ article button{
 .contacto{
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:space-evenly;
     background-color: var(--amarillo);
 }
 .contacto-img{
@@ -258,6 +273,12 @@ footer{
 .cerrar-menu{
     display: none;
 }
+.form{
+    height: 300px;
+    width: 300px;
+    background-color: aliceblue;
+}
+
 @media screen and (max-width: 992px) {
     .abrir-menu{
         margin-right: 20px;

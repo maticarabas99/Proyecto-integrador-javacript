@@ -25,8 +25,19 @@
             <li><a href="#" class="navbar-link">Contacto</a></li>
             <li><a href="#" class="navbar-link">Productos</a></li>
             <li><a class="btn-user" href="#"><img src="imagenes javascript/kisspng-computer-icons-user-membership-vector-5b498fc79b8393.689490051531547591637.png">Iniciar sesión</a></li>
-            <li><a class="btn-cart" href="#"><img src="imagenes javascript/pngwing.com (1).png" alt="cart-img"></a></li>
+            <li><button class="btn-cart"><img  src="imagenes javascript/pngwing.com (1).png" alt="cart-img"></button></li>
           </ul>
+          <div class="cart">
+            <h2> Productos </h2>
+            <div class="cart-container"></div>
+            <div class="cart-total">
+             <p>Total:</p>
+             <span class="total">$60.000</span>   
+            </div>
+            <button class="btn-buy">Comprar</button>
+            <button class="btn-delete">Vaciar carrito</button>
+        </div>
+        <div class="overlay"></div>
         </nav>
     </header>
     <main>
@@ -46,76 +57,27 @@
             <img src="imagenes javascript/pesas.jpg" alt="sobre-nosotros-img-2">
         </aside>
         </section>
-        <section>
+        <section class="productos">
             <article class="tienda">
                 <h3 class="tienda-h3">Productos</h3>
                 <ul class="categorias">
-                    <li><a class="cat-list" href="#">TODOS</a></li>
-                    <li><a class="cat-list" href="#">FUTBOL</a></li>
-                    <li><a class="cat-list" href="#">BASQUET</a></li>
-                    <li><a class="cat-list" href="#">RUNNING</a></li>
-                    <li><a class="cat-list" href="#">GIMNASIO</a></li>
+                    <li><button class="cat-list active">TODOS</button></li>
+                    <li><button class="cat-list">FUTBOL</button></li>
+                    <li><button class="cat-list">BASQUET</button></li>
+                    <li><button class="cat-list">RUNNING</button></li>
+                    <li><button class="cat-list">GIMNASIO</button></li>
                 </ul>
-                <article class="card-productos">
-                    <div class="card">
-                        <img class="producto-img" src="imagenes javascript/16525067-800-auto.jpg" alt="img-monitor">
-                        <div class="info-card">
-                            <h3>Pelota de futbol</h3>
-                            <p>$25.000</p>
-                            <button>Agregar al Carrito</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="producto-img" src="imagenes javascript/AD_GX9285-1.jpg" alt="img-monitor">
-                        <div class="info-card">
-                            <h3>Zapatillas de Running</h3>
-                            <p>$60.000</p>
-                            <button>Agregar al Carrito</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="producto-img" src="imagenes javascript/disco-olimpico-acero-45lbs_5000x.jpg" alt="img-monitor">
-                        <div class="info-card">
-                            <h3>Discos Olimpicos</h3>
-                            <p>$80.000</p>
-                            <button>Agregar al Carrito</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="producto-img" src="imagenes javascript/EDLP.jpg" alt="img-monitor">
-                        <div class="info-card">
-                            <h3>Camiseta Estudiantes</h3>
-                            <p>$20.000</p>
-                            <button>Agregar al Carrito</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="producto-img" src="imagenes javascript/pelota-basquet.jpg" alt="img-monitor">
-                        <div class="info-card">
-                            <h3>Pelota de Basquet</h3>
-                            <p>$50.000</p>
-                            <button>Agregar al Carrito</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="producto-img" src="imagenes javascript/mancuernas.jpg" alt="img-monitor">
-                        <div class="info-card">
-                            <h3>Set de Mancuerna 10 KG</h3>
-                            <p>$60.000</p>
-                            <button>Agregar al Carrito</button>
-                        </div>
-                    </div>
-                </article>
-                <button>Ver Mas</button>
             </article>
+            <div class="card-productos">
+                
+            </div>
+            <button class="btn-vm">Ver Mas</button>
         </section>
         <section class="contacto">
-            
             <article class="contacto-info">
                 <h3>Comunícate con nosotros</h3>
                 <ul>
-                    <li><img src="imagenes javascript/locate_gps_navigation_pin_point_location_icon-icons.com_59906.png" alt="">Calle 56, Mérida, 97000
-                        (999) 123 456</li>
+                    <li><img src="imagenes javascript/locate_gps_navigation_pin_point_location_icon-icons.com_59906.png" alt="">Calle 56, Mérida, 97000</li>
                     <li><img src="imagenes javascript/phone-volume_icon-icons.com_56474.png" alt="">221-3369525</li>
                     <li><img src="imagenes javascript/mail_email_message_electronic_online_web_icon-icons.com_59986.png" alt="">SportStore@hotmail.com</li>
                 </ul>
@@ -128,10 +90,21 @@
                 </ul>
             </article>
         </section>
+        <form class="form" id="form">
+                <label for="fname">Nombre :</label><br>
+                <input type="text" id="name" name="name" value=""><br>
+                <label for="lname">E-mail :</label><br>
+                <input type="text" id="email" name="email" value=""><br><br>
+                <label for="lname">Mensaje :</label><br>
+                <input type="text" id=",msj" name="msj" value=""><br><br>
+                <input type="submit" value="Enviar">
+              </form>
     <footer>
         <p>
             © Copyright - 2017 - 2023 www.SportStore.com, TODOS LOS DERECHOS RESERVADOS. Las fotos contenidas en este site, el logotipo y las marcas son propiedad de www.SportStore.com y/o de sus respectivos titulares. Está prohibida la reproducción total o parcial, sin la expresa autorización de la administradora de la tienda virtual. SportStore, empresa perteneciente al grupo DABRA S.A.</p>
     </footer>
+    <div class="add-modal"></div>
     <script src="index.js"></script>
+    <script src="catalogo.js"></script>
 </body>
 </html>
