@@ -146,6 +146,8 @@ margin: 20px;
     font-family: 'REM', sans-serif;
     list-style-type: none;
     color: black;
+    padding: 0;
+    margin: 0;
 }
 .cat-list{
     border: none;
@@ -464,7 +466,10 @@ footer{
     font-size: 11px;
 }
 .categorias{
-    gap: 10px;
+    gap: 0;
+}
+.categorias button{
+    padding: 0 10px;
 }
 .info-pag{
     padding: 60px 0 0 0;
