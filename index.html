@@ -60,13 +60,13 @@
         <section class="productos">
             <article class="tienda">
                 <h3 class="tienda-h3">Productos</h3>
-                <ul class="categorias">
-                    <li><button class="cat-list active">TODOS</button></li>
-                    <li><button class="cat-list">FUTBOL</button></li>
-                    <li><button class="cat-list">BASQUET</button></li>
-                    <li><button class="cat-list">RUNNING</button></li>
-                    <li><button class="cat-list">GIMNASIO</button></li>
-                </ul>
+                <div class="categorias">
+                    <button class="categoria active">TODOS</button>
+                    <button class="categoria" data-categoria="futbol">FUTBOL</button>
+                    <button class="categoria" data-categoria="basquet">BASQUET</button>
+                    <button class="categoria" data-categoria="running">RUNNING</button>
+                    <button class="categoria" data-categoria="gimnasio">GIMNASIO</button>
+                </div>
             </article>
             <div class="card-productos">
                 
@@ -74,31 +74,41 @@
             <button class="btn-vm">Ver Mas</button>
         </section>
         <section class="contacto">
+            <h2>Comunícate con nosotros</h2>
             <article class="contacto-info">
-                <h3>Comunícate con nosotros</h3>
+                <div class="info">
                 <ul>
                     <li><img src="imagenes javascript/locate_gps_navigation_pin_point_location_icon-icons.com_59906.png" alt="">Calle 56, Mérida, 97000</li>
                     <li><img src="imagenes javascript/phone-volume_icon-icons.com_56474.png" alt="">221-3369525</li>
                     <li><img src="imagenes javascript/mail_email_message_electronic_online_web_icon-icons.com_59986.png" alt="">SportStore@hotmail.com</li>
                 </ul>
-            </article>
-            <article class="redes">
-                <ul>
+                <ol class="redes">
                     <li><a href=><img src="imagenes javascript/facebook_logo_icon_147291.png" alt="facebook"></a></li>
                     <li><a href=""><img src="imagenes javascript/1491580635-yumminkysocialmedia26_83102.png" alt="ig"></a></li>
                     <li><a href=""><img src="imagenes javascript/1491579542-yumminkysocialmedia22_83078.png" alt="Twitter"></a></li>
-                </ul>
+                </ol>
+                </div>
+                <div class="container">
+                    <h2>Formulario de Contacto</h2>
+                    <form id="contactForm">
+                        <label for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="Nombre">
+                        <div class="error" id="nameError"></div>
+                        <label for="email"></label>
+                        <input type="email" id="email" name="email" placeholder="Correo Electrónico">
+                        <div class="error" id="emailError"></div>
+                        <label for="subject"></label>
+                        <input type="text" id="subject" name="subject" placeholder="Asunto">
+                        <div class="error" id="subjectError"></div>
+                        <label for="message"></label>
+                        <textarea id="message" name="message" rows="4"  placeholder="Mensaje"></textarea>
+                        <div class="error" id="messageError"></div>
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <div id="success"></div>
+                </div>
             </article>
         </section>
-        <form class="form" id="form">
-                <label for="fname">Nombre :</label><br>
-                <input type="text" id="name" name="name" value=""><br>
-                <label for="lname">E-mail :</label><br>
-                <input type="text" id="email" name="email" value=""><br><br>
-                <label for="lname">Mensaje :</label><br>
-                <input type="text" id=",msj" name="msj" value=""><br><br>
-                <input type="submit" value="Enviar">
-              </form>
     <footer>
         <p>
             © Copyright - 2017 - 2023 www.SportStore.com, TODOS LOS DERECHOS RESERVADOS. Las fotos contenidas en este site, el logotipo y las marcas son propiedad de www.SportStore.com y/o de sus respectivos titulares. Está prohibida la reproducción total o parcial, sin la expresa autorización de la administradora de la tienda virtual. SportStore, empresa perteneciente al grupo DABRA S.A.</p>
@@ -106,5 +116,6 @@
     <div class="add-modal"></div>
     <script src="index.js"></script>
     <script src="catalogo.js"></script>
+    <script src="formulario.js"></script>
 </body>
 </html>

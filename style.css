@@ -149,7 +149,7 @@ margin: 20px;
     padding: 0;
     margin: 0;
 }
-.cat-list{
+.categoria{
     border: none;
     background-color: white;
 }
@@ -218,22 +218,23 @@ margin: 20px;
 .contacto{
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
     background-color: var(--amarillo);
-}
-.contacto-img{
-    height: 600px;
-    width: 450px;
-}
-.contacto-info{
-    margin-left: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
+.contacto-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+}
 .contacto-info h3{
-    font-size: 40px;
+    font-size: 45px;
     margin:  40px;
     font-family: 'Cabin', sans-serif;
 }
@@ -256,9 +257,18 @@ margin: 20px;
     display: flex;
     align-items: center;
 }
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .redes li{
     padding: 10px;
     list-style-type: none;
+}
+.redes li img{
+    height: 50px;
+    width: 50px;
 }
 footer{
     background-color: black;
@@ -275,11 +285,68 @@ footer{
 .cerrar-menu{
     display: none;
 }
-.form{
-    height: 300px;
-    width: 300px;
-    background-color: aliceblue;
+
+#contactForm{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 5px;
 }
+#contactForm button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 35px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    padding: 6px;
+    font-size: 15px;
+    border: none;
+}
+.container {
+    margin: 0px ;
+    padding: 20px;
+  }
+.container h2{
+    font-size: 25px;
+}
+  input::placeholder,
+  textarea::placeholder {
+      text-align: left; 
+      text-indent: 5px; 
+  }
+
+  input{
+    width: 100%;
+    height: 40px;
+  }
+  
+  textarea {
+    width: 500px;
+    margin-bottom: 10px;
+  }
+  
+  .error {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+  }
+  
+  #success {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+.hidden{
+    display: none;
+}
+.active{
+    background-color: #FEE600;
+}
+
 
 @media screen and (max-width: 992px) {
     .abrir-menu{
@@ -414,6 +481,17 @@ footer{
         padding: 10px 20px;
         line-height: 10px;
     }
+    textarea {
+        width: 260px;
+        margin-bottom: 10px;
+      }
+      input{
+        width: 100%;
+        height: 20px;
+      }
+      #contactForm{
+        font-size: 12px;
+      }
     
 }
 @media screen and (max-width: 700px) {
@@ -462,7 +540,7 @@ footer{
 .tienda-h3{
     font-size: 25px;
 } 
-.cat-list{
+.categoria{
     font-size: 11px;
 }
 .categorias{
@@ -490,6 +568,10 @@ footer{
 .contacto{
     padding: 30px;
 }
+.contacto-info{
+    flex-direction: column;
+    gap: 20px;
+}
 .contacto-info ul {
     gap: 5px;
     font-size: 15px;
@@ -498,4 +580,15 @@ footer{
     font-size: 30px;
     margin: 10px;
 }
+textarea {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+  input{
+    width: 100%;
+    height: 20px;
+  }
+  #contactForm{
+    font-size: 15px;
+  }
 }
