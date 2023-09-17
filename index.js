@@ -19,105 +19,105 @@ const productos = [
     {
         id: 1,
         nombre: "Pelota de Futbol",
-        cateorias: "futbol" ,
+        cateoria: "futbol" ,
         precio: 25.499,
         cardImg: "imagenes javascript/16525067-800-auto.jpg" ,
     },
     {
         id: 2,
         nombre:"Zapatillas de Running",
-        cateorias: "running",
+        cateoria: "running",
         precio: 60.000 ,
         cardImg: "imagenes javascript/AD_GX9285-1.jpg",
     },
     {
         id: 3,
         nombre: "Discos Olimpicos",
-        cateorias:"gimnasio",
+        cateoria:"gimnasio",
         precio: 80.000,
         cardImg: "imagenes javascript/disco-olimpico-acero-45lbs_5000x.jpg" ,
     },
     {
         id: 4,
         nombre: "Camiseta Estudiantes",
-        cateorias: "futbol",
+        cateoria: "futbol",
         precio: 28.199,
         cardImg: "imagenes javascript/EDLP.jpg" ,
     },
     {
         id: 5,
         nombre: "Pelota de Basquet",
-        cateorias: "basquet",
+        cateoria: "basquet",
         precio: 50.000,
         cardImg: "imagenes javascript/pelota-basquet.jpg" ,
     },
     {
         id: 6,
         nombre: "Set de mancuernas 10 kg",
-        cateorias:"gimnasio",
+        cateoria:"gimnasio",
         precio: 60.040,
         cardImg: "imagenes javascript/mancuernas.jpg" ,
     },
     {
         id: 7,
         nombre: "camiseta de boca",
-        cateorias:"futbol",
+        cateoria:"futbol",
         precio: 60.000,
         cardImg: "imagenes javascript/boca.jpg" ,
     },
     {
         id: 8,
         nombre: "camiseta de river",
-        cateorias:"futbol",
+        cateoria:"futbol",
         precio: 60000,
         cardImg: "imagenes javascript/river.jpg" ,
     },
     {
         id: 9,
         nombre: "camiseta de argentina",
-        cateorias:"futbol",
+        cateoria:"futbol",
         precio: 60000,
         cardImg: "imagenes javascript/argentina86.jpg" ,
     },
     {
         id: 10,
         nombre: "Set de mancuernas 10 kg",
-        cateorias:"gimnasio",
+        cateoria:"gimnasio",
         precio: 60000,
         cardImg: "imagenes javascript/bici.jpg" ,
     },
     {
         id: 11,
         nombre: "Set de mancuernas 10 kg",
-        cateorias:"gimnasio",
+        cateoria:"gimnasio",
         precio: 60000,
         cardImg: "imagenes javascript/cuadriceps.jpg" ,
     },
     {
         id: 12,
         nombre: "Set de mancuernas 10 kg",
-        cateorias:"gimnasio",
+        cateoria:"gimnasio",
         precio: 60000,
         cardImg: "imagenes javascript/barra-hexagonal.jpg" ,
     },
     {
         id: 13,
         nombre: "Set de mancuernas 10 kg",
-        cateorias:"gimnasio",
+        cateoria:"basquet",
         precio: 60000,
         cardImg: "imagenes javascript/camisetadebasqut.jpg" ,
     },
     {
         id: 14,
         nombre: "Set de mancuernas 10 kg",
-        cateorias:"gimnasio",
+        cateoria:"running",
         precio: 60000,
         cardImg: "imagenes javascript/gorra-running.jpg" ,
     },
     {
         id: 15,
         nombre: "Set de mancuernas 10 kg",
-        cateorias:"gimnasio",
+        cateoria:"running",
         precio: 60000,
         cardImg: "imagenes javascript/remera-running.jpg" ,
     },
@@ -174,10 +174,6 @@ const createProductTemplate = (product) => {
   }
 
 console.log(appState)
- 
-
-  
- 
 
 const islastIndexOf = () => {
     return appState.currentProductsIndex === appState.productslimit -1
@@ -202,10 +198,10 @@ const setShowMoreVisibility = () => {
     btnVm.classList.add("hidden");
 }
 
- const changeBtnactiveState = (selectedCategory) => {
+ const changeBtnactiveState = (selectedCategoria) => {
     const categorias = [...categoriesList];
     categorias.forEach((categoriaBtn) =>{
-        if(categoriaBtn.dataset.categoria !== selectedCategory){
+        if(categoriaBtn.dataset.categoria !== selectedCategoria){
         categoriaBtn.classList.remove("active")
         return;
     }
@@ -220,27 +216,31 @@ const setShowMoreVisibility = () => {
    
  };
  
-const isInInactiveFitlerBtn = (element) =>{
+const isInInactiveFitlerBtn = (element) => {
     return (
         element.classList.contains("categoria") && !element.classList.contains("active")
     )
 }
 
 const applyFilter = (event) =>{
-    const {target} = event;
+    const { target } = event;
+    console.log(target);
     if(!isInInactiveFitlerBtn(target)) return;
-    cardContainer.innerHTML = ""
-    if(appState.activeFilter){
+    cardContainer.innerHTML = "";
+
+    changeFilterState(target)
+    if(appState.activeFilter) {
         renderFilterProducts();
         appState.currentProductsIndex= 0;
         return;
     }
     renderProducts(appState.products[0])
 }
+console.log(applyFilter)
 
 const renderFilterProducts = () => {
     const filteredProducts = productos.filter(
-        (products) => products.cateorias === appState.activeFilter
+        (products) => products.cateoria === appState.activeFilter
     );
     renderProducts(filteredProducts)
 } 
