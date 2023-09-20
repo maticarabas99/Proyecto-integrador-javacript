@@ -7,7 +7,8 @@
     margin: 0px;
     padding: 0px;
 }
-body{
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,89 +17,101 @@ body{
     background-color: black;
     flex-direction: column;
 }
-.main{
-	width: 350px;
-	height: 500px;
-	background: var(--amarillo);
-	overflow: hidden;
+
+.main {
+    width: 350px;
+    height: 500px;
+    background: var(--amarillo);
+    overflow: hidden;
+    border-radius: 0 25px 25px 0;
 }
-#chk{
-	display: none;
+
+#chk {
+    display: none;
 }
-.crear-cuenta{
-	position: relative;
-	width:100%;
-	height: 100%;
+
+.crear-cuenta {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
-label{
-	color: white;
-	font-size: 30px;
-	justify-content: center;
-	display: flex;
-	margin: 60px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
+
+label {
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
     background-color: #000000;
-    
+    border-radius: 25px;
     padding: 10px;
 }
-input{
-	width: 60%;
-	height: 20px;
-	background: white;
-	justify-content: center;
-	display: flex;
-	margin: 20px auto;
-	padding: 10px;
-	border: none;
-	outline: none;
-	border-radius: 5px;
+
+input {
+    width: 60%;
+    height: 20px;
+    background: white;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
 }
-button{
-	width: 60%;
-	height: 40px;
-	margin: 10px auto;
-	justify-content: center;
-	display: block;
-	color: #000000;
-	background: #ffffff;
-	font-size: 16px;
-	font-weight: bold;
-	margin-top: 20px;
-	outline: none;
-	border: none;
-	border-radius: 5px;
-	transition: .2s ease-in;
-	cursor: pointer;
+
+button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #000000;
+    background: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    
 }
-.iniciar-sesion{
-	height: 460px;
-	background: var(--amarillo);
-	border-radius: 60% / 10%;
-	transform: translateY(-180px);
-	transition: .8s ease-in-out;
+
+.iniciar-sesion {
+    height: 460px;
+    background: var(--amarillo);
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
 }
-.iniciar-sesion label{
-	color: white;
-	transform: scale(.6);
+
+.iniciar-sesion label {
+    color: white;
+    transform: scale(.6);
     border: solid black;
     background-color: #000000;
     padding: 10px;
 }
 
-#chk:checked ~ .iniciar-sesion{
-	transform: translateY(-500px);
+#chk:checked~.iniciar-sesion {
+    transform: translateY(-500px);
 }
-#chk:checked ~ .iniciar-sesion label{
-	transform: scale(1);	
+
+#chk:checked~.iniciar-sesion label {
+    transform: scale(1);
 }
-#chk:checked ~ .crear-cuenta label{
-	transform: scale(.6);
+
+#chk:checked~.crear-cuenta label {
+    transform: scale(.6);
 }
-.back{
-	margin: 10px;
-	background-color: rgb(255, 255, 255);
+
+.back {
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
     padding: 10px 30px;
     display: flex;
     justify-content: center;
@@ -106,25 +119,34 @@ button{
     gap: 10px;
     color: rgb(0, 0, 0);
     font-size: 12px;
-	font-weight: bold;
+    font-weight: bold;
     text-decoration: none;
+    border-radius: 25px;
 }
-.back img{
-	height: 40px;
+
+.back img {
+    height: 40px;
 }
-.fondo{
+
+.fondo {
     display: flex;
 }
-.fondo img{
+
+.fondo img {
     width: 350px;
-	height: 500px;
+    height: 500px;
+    border-radius: 25px 0 0 25px;
 }
-.form{
+
+.form {
     display: flex;
 }
 
 @media screen and (max-width: 700px) {
-    .fondo img{
+    .fondo img {
         display: none;
+    }
+    .main{
+        border-radius: 25px;
     }
 }

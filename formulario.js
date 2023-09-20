@@ -32,7 +32,7 @@ form.addEventListener("submit", function (e) {
         emailError.textContent = "Ingrese una dirección de correo electrónico válida.";
     }
 
-          if (subjectValue === "") {
+    if (subjectValue === "") {
         subjectError.textContent = "Por favor, ingrese un asunto.";
     }
 
