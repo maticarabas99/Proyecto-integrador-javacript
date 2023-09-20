@@ -34,8 +34,8 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 const eliminarProductoDelCarrito = (product) => {
     cart = cart.filter((item) => item !== product);
     agregarCart();
+    localStorage.setItem("cart", JSON.stringify(cart));
 };
-
 
 const agregarCart = () => {
     let cartTotal = 0;
@@ -74,10 +74,11 @@ const agregarCart = () => {
     total.textContent = cartTotal.toFixed(3); 
 };
 
-btnDelete.addEventListener("click" , () =>{
-    cart = [];
+btnDelete.addEventListener("click", () => {
+    cart = []; 
     agregarCart();
-})
+    localStorage.removeItem("cart");
+});
 
 const createProductTemplate = (product) => {
     const { id, nombre, precio, cardImg } = product;
@@ -102,16 +103,15 @@ document.querySelectorAll(".btn-add").forEach((button) => {
         const precio = parseFloat(target.dataset.precio);
         const imagen = target.dataset.img;
         agregarProductosAlCarrito(nombre, precio, imagen);
-        
     });
 });
 
 
-
 const agregarProductosAlCarrito = (nombre, precio, cardImg) => {
-    const productoExistente = cart.find((product) => product.nombre === nombre);
+    let productoExistente = cart.find((product) => product.nombre === nombre);
+
     if (productoExistente) {
-        productoExistente.cantidad++; 
+        productoExistente.cantidad++;
     } else {
         const productoSeleccionado = {
             nombre,
@@ -122,6 +122,7 @@ const agregarProductosAlCarrito = (nombre, precio, cardImg) => {
         cart.push(productoSeleccionado);
     }
     localStorage.setItem("cart", JSON.stringify(cart));
+
     agregarCart();
 };
 window.addEventListener("load", () => {
@@ -209,13 +210,13 @@ const renderFilterProducts = () => {
     );
     renderProducts(filteredProducts);
 };
-// const addClickEventToButtons = () => {
-//     const buttons = document.querySelectorAll(".btn-add");
+const addClickEventToButtons = () => {
+    const buttons = document.querySelectorAll(".btn-add");
     
-//     buttons.forEach((button) => {
-//         button.addEventListener("click", handleAddToCart);
-//     });
-// };
+    buttons.forEach((button) => {
+        button.addEventListener("click", handleAddToCart);
+    });
+};
 
 const handleAddToCart = (event) => {
     const { target } = event;
@@ -230,7 +231,7 @@ const init = () => {
     renderProducts(appState.products[0]);
     btnVm.addEventListener("click", showMoreProducts);
     cateoriesConteiner.addEventListener("click", applyFilter);
-    
+   
 };
 
 init();
