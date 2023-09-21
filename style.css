@@ -48,6 +48,7 @@
     right: 0;
     width: 250px;
     visibility: hidden;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
 }
 .logo {
     height: 50px;
@@ -157,6 +158,7 @@
     height: 30px;
     width: 30px;
     border-radius: 30px;
+    margin: 0 5px;
 }
 .agregar button{
     border: none;
