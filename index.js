@@ -15,11 +15,14 @@ const cartmenu = document.querySelector(".cart");
 const overlay = document.querySelector(".overlay");
 const successModal = document.querySelector(".add-modal");
 const carrito = document.querySelector(".cart");
+const cerrarCart = document.querySelector(".cerrar-cart");
+
 
 
 
 abrir.addEventListener("click", () => {
     nav.classList.add("visible");
+    carrito.classList.remove("visible");
 });
 
 cerrar.addEventListener("click", () => {
@@ -27,8 +30,13 @@ cerrar.addEventListener("click", () => {
 });
 
 btnCart.addEventListener("click", () => {
-    cartShop.classList.add("visible");
+    carrito.classList.add("visible");
+    nav.classList.remove("visible");
 });
+cerrarCart.addEventListener("click", () => {
+    carrito.classList.remove("visible");
+});
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const eliminarProductoDelCarrito = (product) => {

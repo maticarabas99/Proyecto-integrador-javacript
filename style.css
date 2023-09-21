@@ -47,9 +47,7 @@
     top: 60px;
     right: 0;
     width: 250px;
-   
-   
-    
+    visibility: hidden;
 }
 .logo {
     height: 50px;
@@ -595,10 +593,6 @@ textarea {
     }
 
     .nav {
-        display: none;
-    }
-
-    .nav {
         position: absolute;
         top: 0;
         right: 0;
@@ -609,14 +603,10 @@ textarea {
         display: flex;
         align-items: end;
         flex-direction: column;
-        opacity: 0;
         visibility: hidden;
     }
 
-    .nav.visible {
-        opacity: 1;
-        visibility: visible;
-    }
+    
 
     .nav-list {
         flex-direction: column;
@@ -877,5 +867,8 @@ textarea {
     }
     .cart-shop{
         width: 100%;
+    }
+    .item{
+        gap: 0;
     }
 }
