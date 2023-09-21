@@ -63,16 +63,7 @@
     top: 10px;
     right: 10px;
 }
-#abrir {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-}
-.open {
-    display: block;
-}
+
 
 
 .btn-cart img {
@@ -155,12 +146,17 @@
     background-color: white;
     border-radius: 50px;
     margin: 10px;
+    color: black;
 }
 .agregar{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    background-color: var(--amarillo);
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
 }
 .agregar button{
     border: none;
@@ -205,6 +201,7 @@
     margin: 10px;
     background-color: var(--amarillo);
     border: none;
+    color: black;
 }
 .btn-delete{
     border-radius: 20px;
@@ -212,6 +209,7 @@
     margin: 10px;
     background-color: var(--amarillo);
     border: none;
+    color: black;
 }
 .btn-user {
     display: flex;

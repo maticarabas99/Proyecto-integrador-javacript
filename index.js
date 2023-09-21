@@ -8,12 +8,9 @@ const cateoriesConteiner = document.querySelector(".categorias");
 const categoriesList = document.querySelectorAll(".categoria");
 const btnVm = document.querySelector(".btn-vm");
 const cartShop = document.querySelector(".cart-shop");
-const btnBuy = document.querySelector(".btn-buy");
 const btnDelete = document.querySelector(".btn-delete");
 const btnCart = document.querySelector(".btn-cart");
 const cartmenu = document.querySelector(".cart");
-const overlay = document.querySelector(".overlay");
-const successModal = document.querySelector(".add-modal");
 const carrito = document.querySelector(".cart");
 const cerrarCart = document.querySelector(".cerrar-cart");
 
@@ -47,12 +44,11 @@ const eliminarProductoDelCarrito = (product) => {
 
 const agregarCart = () => {
     let cartTotal = 0;
-    cartItem.innerHTML = ""; 
+    cartItem.innerHTML = "";
 
     cart.forEach((product) => {
         const listItem = document.createElement("div");
         listItem.classList.add("item");
-
         const subtotal = product.precio * product.cantidad;
         cartTotal += subtotal;
 
@@ -61,9 +57,7 @@ const agregarCart = () => {
                 <img src="${product.cardImg}" alt="${product.nombre}" />
                 <p>${product.nombre}</p>
                 <div class="agregar">
-                    <button>+</button>
                     <p>${product.cantidad}</p>
-                    <button>-</button>
                 </div>
             </div>
             <div class="cart-total">
@@ -79,11 +73,11 @@ const agregarCart = () => {
 
     });
 
-    total.textContent = cartTotal.toFixed(3); 
+    total.textContent = cartTotal.toFixed(3);
 };
 
 btnDelete.addEventListener("click", () => {
-    cart = []; 
+    cart = [];
     agregarCart();
     localStorage.removeItem("cart");
 });
@@ -134,7 +128,7 @@ const agregarProductosAlCarrito = (nombre, precio, cardImg) => {
     agregarCart();
 };
 window.addEventListener("load", () => {
-    agregarCart(); 
+    agregarCart();
     document.querySelectorAll(".btn-add").forEach((button) => {
         button.addEventListener("click", (event) => {
             const { target } = event;
@@ -220,7 +214,7 @@ const renderFilterProducts = () => {
 };
 const addClickEventToButtons = () => {
     const buttons = document.querySelectorAll(".btn-add");
-    
+
     buttons.forEach((button) => {
         button.addEventListener("click", handleAddToCart);
     });
@@ -239,7 +233,7 @@ const init = () => {
     renderProducts(appState.products[0]);
     btnVm.addEventListener("click", showMoreProducts);
     cateoriesConteiner.addEventListener("click", applyFilter);
-   
+
 };
 
 init();
