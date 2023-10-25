@@ -64,7 +64,7 @@
               <div class="item"></div>
             </div>
             <div class="btn-b-d">
-              <p>Total: <span class="total"></span></p>
+              <p>Total: $ <span class="total"></span></p>
               <button class="btn-buy">Comprar</button>
               <button class="btn-delete">Vaciar carrito</button>
               <img
@@ -86,7 +86,7 @@
           rendimiento y maximizar tu pasión por el juego.
         </p>
       </section>
-    </main>
+    
     <section class="sobre-nosotros" id="sobre-nosotros">
       <article class="sobre-nosotros-info">
         <h2>Desafía tus límites, alcanza tus metas</h2>
@@ -168,9 +168,14 @@
         </div>
         <div class="container">
           <h2>Contáctanos: Estamos Listos para Ayudarte</h2>
-          <form id="contactForm">
+          <form id="contactForm" novalidate>
             <label for="name"></label>
-            <input type="text" id="name" name="name" placeholder="Nombre" />
+            <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Nombre" 
+            required/>
             <div class="error" id="nameError"></div>
             <label for="email"></label>
             <input
@@ -178,6 +183,7 @@
               id="email"
               name="email"
               placeholder="Correo Electrónico"
+              required
             />
             <div class="error" id="emailError"></div>
             <label for="subject"></label>
@@ -202,14 +208,11 @@
         </div>
       </article>
     </section>
+    </main>
     <footer>
       <p>
         © Copyright - 2017 - 2023 www.SportStore.com, TODOS LOS DERECHOS
-        RESERVADOS. Las fotos contenidas en este site, el logotipo y las marcas
-        son propiedad de www.SportStore.com y/o de sus respectivos titulares.
-        Está prohibida la reproducción total o parcial, sin la expresa
-        autorización de la administradora de la tienda virtual. SportStore,
-        empresa perteneciente al grupo DABRA S.A.
+        RESERVADOS.
       </p>
     </footer>
     <script src="formulario.js"></script>

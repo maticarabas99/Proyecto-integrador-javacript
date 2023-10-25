@@ -18,7 +18,8 @@
     z-index: 1;
     justify-content: space-between;
 }
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: center;
 }
@@ -38,7 +39,7 @@
     color: white;
 }
 
-.cart{
+.cart {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,10 +51,12 @@
     visibility: hidden;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
 }
+
 .logo {
     height: 50px;
     width: 50px;
 }
+
 .cerrar-cart {
     background-color: transparent;
     border: none;
@@ -71,13 +74,15 @@
     height: 30px;
     width: 30px;
 }
-.btn-b-d{
+
+.btn-b-d {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
 }
-.btn-b-d p{
+
+.btn-b-d p {
     margin: 0;
     border-radius: 20px;
     padding: 3px 10px;
@@ -85,6 +90,7 @@
     border: none;
     font-size: 20px;
 }
+
 .cart-shop {
     background-color: white;
     padding: 5px;
@@ -104,7 +110,7 @@
 .btn-cart {
     border: none;
     background-color: black;
-    margin:  10px;
+    margin: 10px;
     background-color: transparent;
     border: none;
     color: #fff;
@@ -112,20 +118,22 @@
     cursor: pointer;
     margin-left: 20px;
 }
-.item{
+
+.item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
     width: 100%;
 }
-.item p{
+
+.item p {
     display: flex;
     align-items: center;
     margin: 0;
 }
 
-.cart-item{
+.cart-item {
     display: flex;
     align-items: center;
     width: 100%;
@@ -133,13 +141,15 @@
     gap: 10px;
     flex-direction: column;
 }
-.cart-total span{
+
+.cart-total span {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 5px;
 }
-.eliminar{
+
+.eliminar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,7 +159,8 @@
     margin: 10px;
     color: black;
 }
-.agregar{
+
+.agregar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,7 +171,8 @@
     border-radius: 30px;
     margin: 0 5px;
 }
-.agregar button{
+
+.agregar button {
     border: none;
     width: 30px;
     height: 30px;
@@ -170,17 +182,19 @@
     border-radius: 20px;
 }
 
-.cart-item img{
+.cart-item img {
     height: 40px;
     width: 40px;
 }
-.cart h2{
+
+.cart h2 {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Cabin', sans-serif;
 }
-.cart-total{
+
+.cart-total {
     display: flex;
     justify-content: space-between;
     background-color: rgb(238, 238, 238);
@@ -188,16 +202,18 @@
     padding: 5px 10px;
     margin: 10px;
 }
-.cart-total p{
+
+.cart-total p {
     margin: 0;
 }
 
-.btnc{
+.btnc {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.btn-buy{
+
+.btn-buy {
     border-radius: 20px;
     padding: 3px 10px;
     margin: 10px;
@@ -205,7 +221,8 @@
     border: none;
     color: black;
 }
-.btn-delete{
+
+.btn-delete {
     border-radius: 20px;
     padding: 3px 10px;
     margin: 10px;
@@ -213,6 +230,7 @@
     border: none;
     color: black;
 }
+
 .btn-user {
     display: flex;
     align-items: center;
@@ -249,6 +267,7 @@ body {
     align-items: center;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 30px;
     font-family: 'REM', sans-serif;
 }
@@ -264,6 +283,7 @@ body {
     padding: 20px 200px;
     color: white;
     line-height: 35px;
+    max-width: 1200px;
 }
 
 .info-pag button {
@@ -480,7 +500,7 @@ body {
 footer {
     background-color: black;
     color: white;
-    font-size: 10px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -537,7 +557,7 @@ input {
 }
 
 textarea {
-    width: 500px;
+    width: 100%;
     margin-bottom: 10px;
 }
 
@@ -558,17 +578,28 @@ textarea {
 
 
 
-.agregar{
+.agregar {
     display: flex;
     align-items: center;
 }
+.agregado{
+        font-weight: bold;
+        font-size: 14px;
+        
+      }
 
 
 
 @media screen and (max-width: 992px) {
-    .cart{
+    .cart {
         margin-top: 10px;
     }
+    .agregado{
+        font-size: 11px;
+        margin: 5px;
+        
+      }
+
     .abrir-menu {
         margin-right: 20px;
         display: block;
@@ -606,7 +637,7 @@ textarea {
         visibility: hidden;
     }
 
-    
+
 
     .nav-list {
         flex-direction: column;
@@ -718,13 +749,13 @@ textarea {
     }
 
     footer {
-        font-size: 10px;
+        font-size: 12px;
         padding: 10px 20px;
-        line-height: 10px;
+        line-height: 18px;
     }
 
     textarea {
-        width: 260px;
+        width: 100%;
         margin-bottom: 10px;
     }
 
@@ -736,7 +767,8 @@ textarea {
     #contactForm {
         font-size: 12px;
     }
-    .cart-shop{
+
+    .cart-shop {
         width: 100%;
         margin: 0;
     }
@@ -745,18 +777,18 @@ textarea {
 
 @media screen and (max-width: 700px) {
     .card-productos {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 10px
     }
 
     .card {
-        height: 200px;
-        width: 160px;
+        height: 240px;
+        width: 200px;
     }
 
     .info-card h3 {
-        font-size: 10px;
-        margin: 10px;
+        font-size: 15px;
+        margin: 5px;
     }
 
     .info-card p {
@@ -765,12 +797,14 @@ textarea {
 
     .info-card button {
         padding: 5px;
-        font-size: 7px;
+        font-size: 10px;
         margin-top: 0;
     }
 
     .card-productos img {
         padding: 5px;
+        height: 130px;
+        width: 130px;
     }
 
     .sn-img img {
@@ -781,10 +815,11 @@ textarea {
 
     .sn-img {
         margin: 70px 10px;
+        display: none;
     }
 
     .sobre-nosotros-info {
-        margin: 20px 0 0 10px;
+        margin: 40px ;
     }
 
     .sobre-nosotros-info h2 {
@@ -800,6 +835,9 @@ textarea {
     .tienda-h3 {
         font-size: 25px;
     }
+    .tienda{
+        margin: 10px;
+    }
 
     .categoria {
         font-size: 11px;
@@ -810,7 +848,7 @@ textarea {
     }
 
     .categorias button {
-        padding: 0 10px;
+        padding: 0 5px;
         color: black;
     }
 
@@ -840,6 +878,7 @@ textarea {
     .contacto-info {
         flex-direction: column;
         gap: 20px;
+        ;
     }
 
     .contacto-info ul {
@@ -853,7 +892,7 @@ textarea {
     }
 
     textarea {
-        width: 300px;
+        width: 100%;
         margin-bottom: 10px;
     }
 
@@ -865,10 +904,12 @@ textarea {
     #contactForm {
         font-size: 15px;
     }
-    .cart-shop{
+
+    .cart-shop {
         width: 100%;
     }
-    .item{
+
+    .item {
         gap: 0;
     }
 }
