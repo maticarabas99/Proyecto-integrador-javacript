@@ -9,6 +9,7 @@ const subjectError = document.getElementById("subjectError");
 const messageError = document.getElementById("messageError");
 const successMessage = document.getElementById("success");
 
+
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     nameError.textContent = "";

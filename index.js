@@ -9,7 +9,7 @@ const categoriesList = document.querySelectorAll(".categoria");
 const btnVm = document.querySelector(".btn-vm");
 const cartShop = document.querySelector(".cart-shop");
 const btnDelete = document.querySelector(".btn-delete");
-const btnBuy= document.querySelector(".btn-buy");
+const btnBuy = document.querySelector(".btn-buy");
 const btnCart = document.querySelector(".btn-cart");
 const cartmenu = document.querySelector(".cart");
 const carrito = document.querySelector(".cart");
@@ -53,10 +53,14 @@ const agregarCart = () => {
 
         listItem.innerHTML = `
             <div class="item">
-                <img src="${product.cardImg}" alt="${product.nombre}" />
+                <img class="item-img" src="${product.cardImg}" alt="${product.nombre}" />
                 <p>${product.nombre}</p>
                 <div class="agregar">
                     <p>${product.cantidad}</p>
+                </div>
+                <div class="cantidad">
+                    <button><img src="imagenes javascript/minus.png" /></button>
+                    <button><img src="imagenes javascript/plus.png" /></button>
                 </div>
             </div>
             <div class="cart-total">
@@ -150,10 +154,9 @@ window.addEventListener("load", () => {
 });
 
 const renderProducts = (productList) => {
-    cardContainer.innerHTML = productList.map(createProductTemplate).join("");
+    cardContainer.innerHTML += productList.map(createProductTemplate).join("");
     addClickEventToButtons();
 };
-
 const isLastIndexOf = () => {
     return appState.currentProductsIndex === appState.productslimit - 1;
 };

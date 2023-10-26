@@ -66,8 +66,9 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    height: 30px;
+    width: 30px;
 }
-
 
 
 .btn-cart img {
@@ -79,7 +80,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
 }
 
 .btn-b-d p {
@@ -159,6 +160,7 @@
     margin: 10px;
     color: black;
 }
+
 
 .agregar {
     display: flex;
@@ -582,23 +584,40 @@ textarea {
     display: flex;
     align-items: center;
 }
-.agregado{
-        font-weight: bold;
-        font-size: 14px;
-        
-      }
 
+.agregado {
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.cantidad {
+    margin: 20px;
+}
+
+.cantidad button {
+    border: none;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+}
+
+.cantidad button img {
+    height: 30px;
+    width: 30px;
+}
 
 
 @media screen and (max-width: 992px) {
     .cart {
         margin-top: 10px;
     }
-    .agregado{
+
+    .agregado {
         font-size: 11px;
         margin: 5px;
-        
-      }
+
+    }
 
     .abrir-menu {
         margin-right: 20px;
@@ -780,6 +799,9 @@ textarea {
         grid-template-columns: repeat(1, 1fr);
         gap: 10px
     }
+    .item-img{
+        display: none;
+    }
 
     .card {
         height: 240px;
@@ -819,7 +841,7 @@ textarea {
     }
 
     .sobre-nosotros-info {
-        margin: 40px ;
+        margin: 40px;
     }
 
     .sobre-nosotros-info h2 {
@@ -835,7 +857,8 @@ textarea {
     .tienda-h3 {
         font-size: 25px;
     }
-    .tienda{
+
+    .tienda {
         margin: 10px;
     }
 
@@ -911,5 +934,31 @@ textarea {
 
     .item {
         gap: 0;
+    }
+    .cart-total{
+        margin: 5px;
+    }
+    .eliminar{
+        margin: 5px;
+    }
+    .cantidad {
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .btn-b-d p{
+        font-size: 16px;
+    }
+    .btn-buy{
+        margin: 5px;
+    }
+    .btn-delete{
+        margin: 5px;
+    }
+    .cantidad button img{
+        height: 25px;
+        width: 25px;
     }
 }
