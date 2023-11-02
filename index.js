@@ -55,12 +55,8 @@ const agregarCart = () => {
             <div class="item">
                 <img class="item-img" src="${product.cardImg}" alt="${product.nombre}" />
                 <p>${product.nombre}</p>
-                <div class="agregar">
-                    <p>${product.cantidad}</p>
-                </div>
-                <div class="cantidad">
-                    <button><img src="imagenes javascript/minus.png" /></button>
-                    <button><img src="imagenes javascript/plus.png" /></button>
+                <div>
+                <input type="number" class="cantidad" value="${product.cantidad}" min="1">
                 </div>
             </div>
             <div class="cart-total">
@@ -72,6 +68,14 @@ const agregarCart = () => {
         listItem.querySelector(".eliminar").addEventListener("click", () => {
             eliminarProductoDelCarrito(product);
         });
+
+        listItem.querySelector(".cantidad").addEventListener("input", (e) => {
+            const nuevaCantidad = parseInt(e.target.value);
+            if (nuevaCantidad > 0) {
+              product.cantidad = nuevaCantidad;
+              agregarCart();
+            }
+          });
         cartItem.appendChild(listItem);
     });
 

@@ -162,27 +162,15 @@
 }
 
 
-.agregar {
+.cantidad {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    background-color: var(--amarillo);
     height: 30px;
-    width: 30px;
-    border-radius: 30px;
+    width: 40px;
     margin: 0 5px;
 }
 
-.agregar button {
-    border: none;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-}
 
 .cart-item img {
     height: 40px;
@@ -274,10 +262,18 @@ body {
     font-family: 'REM', sans-serif;
 }
 
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+}
 .info-pag h1 {
     font-size: 160px;
     color: var(--amarillo);
     font-family: 'Cabin', sans-serif;
+
 }
 
 .info-pag p {
@@ -299,10 +295,18 @@ body {
     font-family: 'REM', sans-serif;
 }
 
+.sn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+}
+
 .sobre-nosotros {
     display: flex;
-
     background-color: var(--amarillo);
+    align-items: center;
+    justify-content: center;
 }
 
 .sobre-nosotros-info {
@@ -580,10 +584,7 @@ textarea {
 
 
 
-.agregar {
-    display: flex;
-    align-items: center;
-}
+
 
 .agregado {
     font-weight: bold;
@@ -591,21 +592,6 @@ textarea {
 
 }
 
-.cantidad {
-    margin: 20px;
-}
-
-.cantidad button {
-    border: none;
-    background-color: white;
-    height: 40px;
-    width: 40px;
-}
-
-.cantidad button img {
-    height: 30px;
-    width: 30px;
-}
 
 
 @media screen and (max-width: 992px) {

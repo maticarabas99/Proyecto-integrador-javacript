@@ -120,3 +120,4 @@ const appState = {
     productslimit: dividerProductsInParts(6).length,
     activeFilter: null
 }
+
